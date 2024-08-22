@@ -16,10 +16,10 @@ def main():
     #print(soup)
 
     statsPG=soup.find(id="per_game")
-    print(statsPG)
+    #print(statsPG)
 
-    stats = pd.read_html(StringIO(str(statsPG)))[0]  # Use StringIO to wrap the HTML string
-    print(stats)
+    statsDF = pd.read_html(StringIO(str(statsPG)))[0]  # Use StringIO to wrap the HTML string
+    print(statsDF)
 
 if __name__=="__main__":
     main()
